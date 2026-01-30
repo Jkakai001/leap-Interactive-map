@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pittsburgh Interactive Maps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .maps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .map-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .map-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .map-card h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .map-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .map-card .description {
+            font-size: 1em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .map-card .count {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        .original-map {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .original-map a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .original-map a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Pittsburgh Interactive Maps</h1>
+        <p class="subtitle">Choose a map to view filtered locations</p>
+        
+        <div class="maps-grid">
+            <a href="pittsburgh_map_leap_landmarks.html" class="map-card">
+                <div class="icon">⭐</div>
+                <h2>LEAP & Landmarks</h2>
+                <p class="description">
+                    View locations from the LEAP list and neighborhood landmarks
+                </p>
+                <div class="count">22 locations</div>
+            </a>
+            
+            <a href="pittsburgh_map_jaymars_landmarks.html" class="map-card">
+                <div class="icon">📋</div>
+                <h2>Jaymars List & Landmarks</h2>
+                <p class="description">
+                    View locations from Jaymars list and neighborhood landmarks
+                </p>
+                <div class="count">42 locations</div>
+            </a>
+        </div>
+        
+        <div class="original-map">
+            <p style="margin-top: 30px; color: #666;">
+                Or view the <a href="pittsburgh_interactive_map.html">complete map with all locations</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
